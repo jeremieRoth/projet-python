@@ -1,6 +1,6 @@
 from flask import Flask;
 from flask import render_template;
-
+import pythonbdd;
 app= Flask(__name__, template_folder='./view')
 
 @app.route('/')
@@ -13,7 +13,8 @@ def kappa():
 
 @app.route('/issou')
 def issou():
-	return 'issou'
+    data = pythonbdd.db()
+    return render_template('mongo.html', data=data)
 
-# if __name__ =='__main__':
-# 	app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)

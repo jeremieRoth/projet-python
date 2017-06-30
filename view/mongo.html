@@ -1,0 +1,10 @@
+<html>
+	<body>
+		{% for post in data %}
+		<h2>Titre</h2>
+		<p>{{ post.name }}</p>
+		<p>Note : {{post.note}}/5</p>
+		{% endfor %}
+	</body>
+
+</html>

@@ -1,13 +1,16 @@
 from pymongo import MongoClient
 client = MongoClient()
 
-client = Mo,goClient('localhost', 27017)
+client = MongoClient('localhost', 27017)
 
-db = client.test_database
+#db = client.movie
 
-db = client ['test_database']
-
-collection = db.test_database
+db = client.projet
+def  db():
+    base = client.projet
+    #collection = client['pr']
+    collection = base.movie.find()
+    return collection
 
 # import datetime
 
