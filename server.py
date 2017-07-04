@@ -55,11 +55,11 @@ def recupFile():
 @app.route('/json')
 def jsonParse():
 
-	return json_file
-
+	# return json_file
+	json_data=open(json_file).read()
 	# json_data=open(file2).read()
-	# data=json.loads(json_data)
-	# return data["menu"]
+	data=json.loads(json_data)
+	return data["menu"]
 	# chaine="<html><head></head><body>"
 
 	# if(is_array(data))
