@@ -30,11 +30,13 @@
 	</div>
 	<div class="row" style="margin-top: 5%">
 		<div class="container col-lg-4 col-lg-offset-4 well">
-			<h2 >Film</h2>
+			<h2 >Classes</h2>
+      {{data}}
 			{% for post in data %}
 			<div class="row" style="margin-top: 5%">
-			<span style="">Titre : <p class="form-control">{{ post.nom }}</p></span>
-			<p>Note : {{post.note}}/5</p>
+			<span style="">Id : <p class="form-control">{{ post._id }}</p></span>
+			<span style="">nom class : <p class="form-control">{{ post.class.name }}</p></span>
+			<span> nom sous class : <p class="form-control">  {{ post.class.subname.mothername }} </p></span>
 			<div style="width: 100%; border: 1px solid grey"></div>
 			</div>
 			{% endfor %}

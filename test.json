@@ -1,0 +1,16 @@
+{
+    "class" : [
+        {
+            "name" : "classe_1",
+            "sclass" : [ {"classeMere" : "classe_10"} ]
+        },
+        {
+            "name" : "classe_2",
+            "sclass" : [ {"classeMere" : "classe_11"} ]
+        },
+        {
+            "name" : "classe_3",
+            "sclass" : [ {"classeMere" : "classe_12"} ]
+        }
+    ]
+}
