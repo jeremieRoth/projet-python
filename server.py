@@ -5,7 +5,7 @@ app= Flask(__name__, template_folder='./view', static_url_path='/view/assets')
 
 @app.route('/')
 def index():
-	return render_template('index.html');
+	return render_template('index.html')
 
 @app.route('/kappa')
 def kappa():
@@ -15,7 +15,7 @@ def kappa():
 def issou():
     data = pythonbdd.db()
     
-    return app.send_static_file('mongo.html') #render_template('mongo.html', data=data)
+    return render_template('mongo.html',data=data) #render_template('mongo.html', data=data)
 
 if __name__ == '__main__':
     app.run(debug=True)
