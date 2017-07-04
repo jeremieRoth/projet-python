@@ -15,7 +15,7 @@ def kappa():
 def issou():
     data = pythonbdd.db()
     
-    return render_template('mongo.html', data=data)
+    return app.send_static_file('mongo.html') #render_template('mongo.html', data=data)
 
 if __name__ == '__main__':
     app.run(debug=True)
